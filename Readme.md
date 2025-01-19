@@ -1,0 +1,5 @@
+﻿
+# Nuget Packages
+
+- MySql.Data
+
