@@ -9,7 +9,7 @@ using System.Linq;
 namespace OrakUtilMariadb.DbHelper
 {
 
-    public class FiMariadb
+    public class OkMariadb
 	{
 		public string connString { get; private set; }
 		public MySqlConnection conn { get; private set; }
@@ -20,11 +20,11 @@ namespace OrakUtilMariadb.DbHelper
 		public MySqlCommand comm { get; private set; }
 
 
-		public FiMariadb(string connString)
+		public OkMariadb(string connString)
 		{
 			this.connString = connString;
-			conn = new MySqlConnection(this.connString);
-			comm = conn.CreateCommand();
+			//conn = new MySqlConnection(this.connString);
+			//comm = conn.CreateCommand();
 		}
 
 
