@@ -8,8 +8,8 @@
         <ProjectGuid>{6D64CBE6-619F-416E-AC35-1565D638D64F}</ProjectGuid>
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>OrakUtilMariaDb</RootNamespace>
-        <AssemblyName>OrakUtilMariaDb</AssemblyName>
+        <RootNamespace>OrakUtilMysql</RootNamespace>
+        <AssemblyName>OrakUtilMysql   </AssemblyName>
         <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <LangVersion>8</LangVersion>
