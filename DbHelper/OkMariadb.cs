@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 
-namespace OrakUtilMariadb.DbHelper
+namespace OrakUtilMysql.DbHelper
 {
 
     public class OkMariadb
@@ -23,8 +23,8 @@ namespace OrakUtilMariadb.DbHelper
 		public OkMariadb(string connString)
 		{
 			this.connString = connString;
-			//conn = new MySqlConnection(this.connString);
-			//comm = conn.CreateCommand();
+			conn = new MySqlConnection(this.connString);
+			comm = conn.CreateCommand();
 		}
 
 
@@ -41,11 +41,7 @@ namespace OrakUtilMariadb.DbHelper
 
 		private MySqlParameter[] ProcessParameters(FiKeybean fkbParams)
 		{
-			MySqlParameter[] pars = fkbParams.Select(pair => new MySqlParameter()
-			{
-				ParameterName = pair.Key,
-				Value = pair.Value
-			}).ToArray();
+			MySqlParameter[] pars = fkbParams.Select(pair => new MySqlParameter(pair.Key, pair.Value)).ToArray();
 
 			return pars;
 		}
