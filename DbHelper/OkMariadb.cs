@@ -39,7 +39,7 @@ namespace OrakUtilMysql.DbHelper
 		// 	return pars;
 		// }
 
-		private MySqlParameter[] ProcessParameters(FiKeybean fkbParams)
+		private MySqlParameter[] ProcessParameters(Fkb fkbParams)
 		{
 			MySqlParameter[] pars = fkbParams.Select(pair => new MySqlParameter(pair.Key, pair.Value)).ToArray();
 
@@ -78,7 +78,7 @@ namespace OrakUtilMysql.DbHelper
 		// 	return result;
 		// }
 
-		public virtual int RunQuery(string query, FiKeybean parameters)
+		public virtual int RunQuery(string query, Fkb parameters)
 		{
 			comm.Parameters.Clear();
 			comm.CommandText = query;
@@ -109,7 +109,7 @@ namespace OrakUtilMysql.DbHelper
 			return result;
 		}
 
-		public virtual DataTable RunProc(string procName,FiKeybean parameters) //params ParamItem[] parameters
+		public virtual DataTable RunProc(string procName,Fkb parameters) //params ParamItem[] parameters
 		{
 			comm.Parameters.Clear();
 			comm.CommandText = procName;
@@ -128,7 +128,7 @@ namespace OrakUtilMysql.DbHelper
 		}
 
 
-		public virtual DataTable GetTable(string query, FiKeybean parameters ) //params ParamItem[] parameters
+		public virtual DataTable GetTable(string query, Fkb parameters ) //params ParamItem[] parameters
 		{
 			comm.Parameters.Clear();
 			comm.CommandText = query;
